@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> html page color change by button </h1>
+
+    <button onclick="red()" >click here for red</button> <br> <br>
+    <button onclick="green()" >click here for green</button> <br> <br>
+    <button onclick="document.body.style.backgroundColor = 'blue' " >click here for blue</button>
+    <script>
+        function red(){
+            document.body.style.backgroundColor = 'red';
+        }
+        function green(){
+            document.body.style.backgroundColor = 'green';
+        }
+    </script>
+</body>
+</html>
