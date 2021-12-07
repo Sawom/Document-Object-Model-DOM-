@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> welcome to my blog</h1>
+    <section>
+        <ul id="newList">
+            <li>part - 1</li>
+            <li>part - 2</li>
+            <li>part - 3</li>
+            <li>part - 4</li>
+            <li>part - 5</li>
+            <li>part - 6</li>
+        </ul>
+    </section>
+
+    <section id="idblog" class="blog">
+        <article class="blog">
+            <h2> blog 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim necessitatibus, et iste molestiae
+                 fuga beatae nisi nulla a nihil corporis ipsa commodi nobis est sunt magnam architecto, autem ad
+                  ratione deleniti voluptatem velit. Esse nemo, repudiandae ipsa dicta deleniti earum.</p>
+        </article>
+
+        <article class="blog">
+            <h2> blog 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim necessitatibus, et iste molestiae
+                 fuga beatae nisi nulla a nihil corporis ipsa commodi nobis est sunt magnam architecto, autem ad
+                  ratione deleniti voluptatem velit. Esse nemo, repudiandae ipsa dicta deleniti earum.</p>
+        </article>
+
+        <article class="blog">
+            <h2 id="change"> blog 3</h2>
+            <p id="clr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim necessitatibus, et iste molestiae
+                 fuga beatae nisi nulla a nihil corporis ipsa commodi nobis est sunt magnam architecto, autem ad
+                  ratione deleniti voluptatem velit. Esse nemo, repudiandae ipsa dicta deleniti earum.</p>
+        </article>
+
+    </section>
+
+    <script>
+        // tagname
+        console.log(document.getElementsByTagName('h2'));
+        const para = document.getElementsByTagName('p');
+        for(const paragraph of para){
+            console.log(para);
+        }
+        // getElementsById
+        const ha = document.getElementById('change');
+        ha.style.textAlign = 'center';
+        ha.style.color = 'red';
+        const pu = document.getElementById('clr');
+        pu.style.textAlign = 'center';
+        pu.style.color = 'blue';
+        
+        
+        // query selector
+        console.log(document.querySelector('#change'));
+        console.log(document.querySelectorAll('.blog'));
+        // create list 
+        const list = document.createElement('li');
+        list.innerText = 'part - 7';
+        const add = document.getElementById('newList');
+        add.appendChild(list);
+        // create article
+        const article = document.createElement('article');
+        const h2 = document.createElement('h2');
+        h2.innerText = 'blog 4';
+        const p = document.createElement('p');
+        p.innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim necessitatibus, et iste molestiae fuga beatae nisi nulla a nihil corporis ipsa commodi nobis est sunt magnam architecto, autem ad ratione deleniti voluptatem velit. Esse nemo, repudiandae ipsa dicta deleniti earum.'
+        article.appendChild(h2);
+        article.appendChild(p);
+
+        const newArticle = document.getElementById('idblog');
+        newArticle.appendChild(article)
+
+        // getElementsByClassName
+        const blg = document.getElementsByClassName('blog');
+        for(const blogs of blg){
+            blogs.style.padding = '10px';
+            blogs.style.margin = '20px';
+            blogs.style.color = 'blue';
+            blogs.style.border = '2px solid coral';
+            blogs.style.borderRadius = '20px';
+            blogs.style.textAlign = 'center';
+        }
+    </script>
+</body>
+</html>
