@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> create comment by js</h1>
+    <div id="commentArea">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Nobis similique dolorum temporibus assumenda soluta 
+             beatae nemo non dolore quae consequatur!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Nobis similique dolorum temporibus assumenda soluta 
+             beatae nemo non dolore quae consequatur!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Nobis similique dolorum temporibus assumenda soluta 
+             beatae nemo non dolore quae consequatur!</p>
+    </div>
+    <div>
+        <h2>add comment</h2>
+        <textarea name="" id="comment" cols="60" rows="10"></textarea> <br>
+        <button id="btn"> post comment </button>
+    </div>
+
+    <script>
+        document.getElementById('btn').addEventListener('click',function(){
+            const newCmnt = document.getElementById('comment');
+            const p = document.createElement('p');
+            p.innerText = newCmnt.value;
+            const cmntAra = document.getElementById('commentArea');
+            cmntAra.appendChild(p);
+            newCmnt.value = '';
+        })
+    </script>
+</body>
+</html>
