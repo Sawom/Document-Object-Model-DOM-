@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Delete</h1>
+    <p id="delete"> this text should be deleted </p>
+    <input type="text" id="sDelete"  placeholder="type delete to confirm"> <br> <br>
+    <button  id="btn" disabled>delete</button>
+    <script>
+        // focus red
+        document.getElementById('sDelete').addEventListener('focus',function(){
+            document.body.style.background = 'coral';
+        })
+        // blur white
+        document.getElementById('sDelete').addEventListener('blur', function(){
+            document.body.style.background = 'white';
+        })
+        // type delete
+        document.getElementById('btn').addEventListener('click',function(){
+            const btn = document.getElementById('delete').style.display = 'none';
+        })
+        document.getElementById('sDelete').addEventListener('keyup', function(){
+            const baton = document.getElementById('sDelete');
+            if(event.target.value == 'delete'){
+                document.getElementById('btn').removeAttribute('disabled');
+            }
+            else{
+                document.getElementById('btn').setAttribute('disabled',true);
+            }
+        })
+    </script>
+</body>
+</html>
