@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>button diye paragraph add </h1>
+    <!-- paragraph 1 added -->
+    <p id="paragraph1"></p> 
+    <button onclick="add()" >click here to add p1</button>
+    <!-- paragraph 2 added -->
+    <p id="paragraph2"></p> 
+    <button id="p2">click here to add p2</button>
+    <!-- input text -->
+    <br> <br>
+    <input type="text" placeholder="input text" id="text">
+    <p id="paragraph3"></p>
+    <button id="p3">click here to add p3</button>
+    <script>
+        function add(){
+            const p = document.getElementById('paragraph1');
+            p.innerText = 'paragraph added by js';
+        }
+        document.getElementById('p2').addEventListener('click',function(){
+            const para = document.getElementById('paragraph2');
+            para.innerText = 'second paragraph added by js';
+        })
+        // input text function
+        document.getElementById('p3').addEventListener('click',function(){
+            const addText = document.getElementById('text');
+            const para1 = document.getElementById('paragraph2');
+            para1.innerText =  addText.value;
+            addText.value = '';
+        })
+    </script>
+</body>
+</html>
